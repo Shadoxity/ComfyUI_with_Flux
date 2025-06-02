@@ -16,6 +16,7 @@ file_list=(
   "Controlnet2img.json"
   "ExpressionEditor.json"
   "Facedetailer.json"
+  "fantasy_talk_test.json"
   "FaceSwap.json"
   "img2img.json"
   "img2pose.json"
