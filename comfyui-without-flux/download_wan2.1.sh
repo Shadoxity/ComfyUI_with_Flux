@@ -13,6 +13,16 @@ else
     wget -O $file $url --progress=bar:force:noscroll
 fi
 
+file="open-clip-xlm-roberta-large-vit-huge-14_visual_fp16.safetensors"
+url="https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/open-clip-xlm-roberta-large-vit-huge-14_visual_fp16.safetensors?download=true"
+
+if [ -f "$file" ]; then
+    echo "$file already exists."
+else
+    echo "Downloading $file"
+    wget -O $file $url --progress=bar:force:noscroll
+fi
+
 
 echo "Downloading wan_2.1_vae.safetensors"
 cd /ComfyUI/models/vae/
@@ -27,11 +37,11 @@ else
     wget -O $file $url --progress=bar:force:noscroll
 fi
 
-echo "Downloading wan2.1_i2v_720p_14B_bf16.safetensors"
+echo "Downloading wan2.1_i2v_480p_14B_fp16.safetensors"
 cd /ComfyUI/models/diffusion_models/
 
-file="wan2.1_i2v_720p_14B_bf16.safetensors"
-url="https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_i2v_720p_14B_bf16.safetensors?download=true"
+file="wan2.1_i2v_480p_14B_fp16.safetensors"
+url="https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_i2v_480p_14B_fp16.safetensors?download=true"
 
 if [ -f "$file" ]; then
     echo "$file already exists."
@@ -53,11 +63,11 @@ else
     wget -O $file $url --progress=bar:force:noscroll
 fi
 
-echo "Downloading wan2.1_t2v_14B_bf16.safetensors"
+echo "Downloading wan2.1_t2v_14B_fp16.safetensors"
 cd /ComfyUI/models/diffusion_models/
 
-file="wan2.1_t2v_14B_bf16.safetensors"
-url="https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_t2v_14B_bf16.safetensors?download=true"
+file="wan2.1_t2v_14B_fp16.safetensors"
+url="https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_t2v_14B_fp16.safetensors?download=true"
 
 if [ -f "$file" ]; then
     echo "$file already exists."
