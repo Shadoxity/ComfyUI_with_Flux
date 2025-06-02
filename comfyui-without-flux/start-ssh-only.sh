@@ -33,6 +33,13 @@ if [[ "${DOWNLOAD_WAN}" == "true" ]]; then
     /download_wan2.1.sh
 fi
 
+if [[ "${DOWNLOAD_CUSTOM}" == "true" ]]; then
+    echo "Downloading latest version of download_custom.sh from GitHub..."
+    curl -sSfL -o /download_custom.sh https://raw.githubusercontent.com/Shadoxity/ComfyUI_with_Flux/main/comfyui-without-flux/download_custom.sh
+    chmod +x /download_custom.sh
+    /download_custom.sh
+fi
+
 if [[ "${DOWNLOAD_FLUX}" == "true" ]]; then
     /download_Files.sh
 fi
